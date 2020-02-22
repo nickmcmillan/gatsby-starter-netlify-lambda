@@ -1,4 +1,22 @@
+const { createProxyMiddleware } = require('http-proxy-middleware')
+
 module.exports = {
+
+  // for rewriting /subscribe to 
+  // read more: https://www.gatsbyjs.org/docs/api-proxy/#advanced-proxying
+  developMiddleware: app => {
+    app.use(
+      '/subscribe',
+      createProxyMiddleware({
+        target: 'http://localhost:9000',
+        changeOrigin: true,
+        // pathRewrite: {
+        //   '/.netlify/functions/': '',
+        // },
+      })
+    )
+  },
+
   siteMetadata: {
     title: `Gatsby Starter Blog`,
     author: `Kyle Mathews`,
