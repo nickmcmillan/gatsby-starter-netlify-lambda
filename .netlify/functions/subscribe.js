@@ -5,6 +5,7 @@ require('dotenv').config({
 })
 
 // (install modules as devDependencies in the top level package.json)
+// also need to install 'encoding' package. // https://github.com/netlify/netlify-lambda/issues/142
 const fetch = require('node-fetch').default;
 const base64 = require('base-64')
 

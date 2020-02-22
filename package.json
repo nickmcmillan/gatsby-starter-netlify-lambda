@@ -37,6 +37,7 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
+    "encoding": "^0.1.12",
     "http-proxy-middleware": "^1.0.0",
     "netlify-lambda": "^1.6.3",
     "node-fetch": "^2.6.0",
