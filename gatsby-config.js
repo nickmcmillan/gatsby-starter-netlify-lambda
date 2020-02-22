@@ -5,14 +5,12 @@ module.exports = {
   // for rewriting /subscribe to 
   // read more: https://www.gatsbyjs.org/docs/api-proxy/#advanced-proxying
   developMiddleware: app => {
+
     app.use(
-      '/subscribe',
+      '/api/*',
       createProxyMiddleware({
-        target: 'http://localhost:9000',
+        target: 'http://localhost:9000/subscribe',
         changeOrigin: true,
-        // pathRewrite: {
-        //   '/.netlify/functions/': '',
-        // },
       })
     )
   },
