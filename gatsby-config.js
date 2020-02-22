@@ -9,6 +9,7 @@ module.exports = {
     app.use(
       '/api/*',
       createProxyMiddleware({
+        // would be good to make this more generic, supporting multiple functions..
         target: 'http://localhost:9000/subscribe',
         changeOrigin: true,
       })
@@ -16,12 +17,11 @@ module.exports = {
   },
 
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
+    title: `Gatsby Starter Netlify Lambda`,
+    author: `Nick McMillan`,
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `nick_computer`,
     },
   },
   plugins: [
