@@ -7,7 +7,7 @@ export default function Form() {
   // this POSTs to ./.netlify/functions/subscribe.js
   const handleSubmit = async () => {
     try {
-      const res = await fetch('/subscribe', {
+      const res = await fetch('/api/subscribe', {
         method: 'POST',
         cache: 'no-cache',
         headers: {
