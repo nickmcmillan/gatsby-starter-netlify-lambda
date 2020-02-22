@@ -5,7 +5,7 @@ require('dotenv').config({
 })
 
 // (install modules as devDependencies in the top level package.json)
-const fetch = require('node-fetch')
+const fetch = require('node-fetch').default;
 const base64 = require('base-64')
 
 // exports.handler is required by netlify
