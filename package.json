@@ -58,6 +58,7 @@
     "build": "gatsby build && netlify-lambda build ./.netlify/functions",
     "build:app": "gatsby build",
     "build:lambda": "netlify-lambda build ./.netlify/functions",
+    "postinstall": "netlify-lambda install",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "run-p start:**",
